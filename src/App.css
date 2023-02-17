@@ -1,0 +1,71 @@
+.App {
+  max-width: 860px;
+  margin: 40px auto;
+  text-align: center;
+  color: white;
+  font-family: Raleway, sans-serif;
+}
+/* base styles */
+body {
+  text-align: center;
+  background-color: rgb(54, 40, 87);
+}
+button {
+  font-size: 1.5em;
+  padding: 5px;
+  background: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+.show-images {
+  margin: 30px 30px;
+  display: grid;
+  column-gap: 15px;
+  grid-template-columns: 150px 150px 150px 150px;
+  justify-content: center;
+  align-items: center;
+}
+.both {
+  position: relative;
+}
+.flipped > .back {
+  transform: rotateY(90deg);
+}
+.front {
+  z-index: -3;
+  position: absolute;
+}
+img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid white;
+  margin: 3px 3px;
+  border-radius: 10px;
+}
+.not-won {
+  display: none;
+}
+.has-won {
+  display: block;
+}
+
+@media (max-width: 470px) {
+  .show-images {
+    margin: 30px 30px;
+    display: grid;
+    column-gap: 3px;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 75px;
+    height: 75px;
+    border: 1px solid white;
+    margin: 3px 3px;
+    border-radius: 10px;
+  }
+}
